@@ -147,6 +147,7 @@ void SoundAnalyser::convertRelativeMagsToBrightnessInFilters(){
                                                         /(filtersValues.MidFilter.maxDBFS - MIN_MID_DBFS_FOR_ZERO_BRIGHTNESS)) * MAX_BRIGHTNESS);
     filtersValues.HighFilter.ledBrightness = (uint8_t)std::round(((filtersValues.HighFilter.DBFS - MIN_HIGH_DBFS_FOR_ZERO_BRIGHTNESS)
                                                         /(filtersValues.HighFilter.maxDBFS - MIN_HIGH_DBFS_FOR_ZERO_BRIGHTNESS)) * MAX_BRIGHTNESS);
+    printf("Colors: %d - %d - %d\n", filtersValues.LowFilter.ledBrightness, filtersValues.MidFilter.ledBrightness, filtersValues.HighFilter.ledBrightness);
 }
 
 void SoundAnalyser::prepareSoundLedArray(){

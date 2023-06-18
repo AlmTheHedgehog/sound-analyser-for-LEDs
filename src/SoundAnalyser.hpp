@@ -12,7 +12,7 @@
 
 
 #define SAMPLE_RATE  (48000) // 44100 was - 48000 in system
-#define FRAMES_PER_BUFFER (2048) //512 was (93.75HZ analizing) - 4096 good - 1024 in system propably // better 2048 || 1024
+#define FRAMES_PER_BUFFER (1024) //512 was (93.75HZ analizing) - 4096 good - 1024 in system propably // better 2048 || 1024
 #define NUM_CHANNELS    (1)
 #define SUGGESTED_LATTENCY (0.01) // 0.01 seconds LATTENCY dellay (according to 100Hz refreshing)
 #define FREQ_MAGNITUDES_BUFFER_SIZE ((FRAMES_PER_BUFFER / 2) + 1)
@@ -28,15 +28,15 @@ typedef float SAMPLE;
 #define PRINTF_S_FORMAT "%.8f"
 
 /*Sound analize*/
-#define LOW_MIDDLE_SEPARATION_FREQUENCY (250)  // 250HZ - only basses :) 500 - normal
+#define LOW_MIDDLE_SEPARATION_FREQUENCY (500)  // 250HZ - only basses :) 500 - normal
 #define MIDDLE_HIGH_SEPARATION_FREQUENCY (2500)
 // #define MIN_LOW_DBFS_FOR_ZERO_BRIGHTNESS -350
 // #define MIN_MID_DBFS_FOR_ZERO_BRIGHTNESS -2500
 // #define MIN_HIGH_DBFS_FOR_ZERO_BRIGHTNESS -35000
 
-#define MIN_LOW_DBFS_FOR_ZERO_BRIGHTNESS -320
-#define MIN_MID_DBFS_FOR_ZERO_BRIGHTNESS -3200
-#define MIN_HIGH_DBFS_FOR_ZERO_BRIGHTNESS -55000
+#define MIN_LOW_DBFS_FOR_ZERO_BRIGHTNESS -600
+#define MIN_MID_DBFS_FOR_ZERO_BRIGHTNESS -3000
+#define MIN_HIGH_DBFS_FOR_ZERO_BRIGHTNESS -40000
 // #define MIN_LOW_DBFS_FOR_ZERO_BRIGHTNESS -500
 // #define MIN_MID_DBFS_FOR_ZERO_BRIGHTNESS -4000
 // #define MIN_HIGH_DBFS_FOR_ZERO_BRIGHTNESS -80000
