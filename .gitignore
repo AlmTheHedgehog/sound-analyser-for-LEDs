@@ -1,4 +1,3 @@
-Tips/
-UsedInProcess/
-target/
+include/
+build/
 .vscode/
